@@ -1,0 +1,17 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 03 Jun 2025 02:03:44 at https://www.officedaytime.com/simd512e/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qiC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.officedaytime.com/simd512e/ -O1 "D:\websites\officedaytime\officedaytime" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+02:03:44	Warning: 	HTML file (770 bytes) retransferred due to lack of cache: https://www.officedaytime.com/simd512e/
+02:11:13	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.officedaytime.com/simd512e/simd.html (from https://www.officedaytime.com/simd512e/simdimg/si.php?f=movq)
+02:11:14	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.officedaytime.com/simd512e/simdimg/ternop_qword_3.png (from https://www.officedaytime.com/simd512e/simdimg/ternopv5.php?f=vpshldvq)
+02:11:14	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.officedaytime.com/simd512e/simdimg/aes320.png (from https://www.officedaytime.com/simd512e/simdimg/aes.php?f=aesdec)
+02:11:15	Warning: 	Moved Permanently for https://www.officedaytime.com/simd512e/simd.html
+02:11:15	Warning: 	File has moved from https://www.officedaytime.com/simd512e/simd.html to https://www.officedaytime.com/simd512e/
+
+HTTrack Website Copier/3.49-2 mirror complete in 7 minutes 31 seconds : 1362 links scanned, 1357 files written (15073228 bytes overall), 1357 files updated [13972742 bytes received at 30981 bytes/sec], 2054735 bytes transferred using HTTP compression in 602 files, ratio 30%, 68.7 requests per connection
+(No errors, 6 warnings, 0 messages)

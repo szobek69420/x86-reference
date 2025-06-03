@@ -1,0 +1,13 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+en.wikibooks.org	TRUE	/	FALSE	1999999999	WMF-Last-Access	03-Jun-2025
+.wikibooks.org	TRUE	/	FALSE	1999999999	WMF-Last-Access-Global	03-Jun-2025
+.wikibooks.org	TRUE	/	FALSE	1999999999	GeoIP	DE:BW:Karlsruhe:49.01:8.42:v4
+en.wikibooks.org	TRUE	/	FALSE	1999999999	NetworkProbeLimit	0.001
+.wikibooks.org	TRUE	/	FALSE	1999999999	WMF-Uniq	HLKPygHB3piWyWNdz83dHwIHAAEBAFvdKAOKnZHXHejEY1xiRIn_AJ8mN7JzMO0W
+en.wikibooks.org	TRUE	/	FALSE	1999999999	SameSite	Lax
+en.wikibooks.org	TRUE	/	FALSE	1999999999	WMF-DP	397,10e,242,f5f,9b1,445,184,00e,572
+en.wikibooks.org	TRUE	/	FALSE	1999999999	include_pv	0
+upload.wikimedia.org	TRUE	/	FALSE	1999999999	WMF-Uniq	-iweVxlXL54jHtJn33a5UgIHAAEBAFvdMuZipb649NHVmIsaztx67LxRg_HNXssC
+upload.wikimedia.org	TRUE	/	FALSE	1999999999	SameSite	None
+

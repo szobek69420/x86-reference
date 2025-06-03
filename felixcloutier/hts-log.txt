@@ -1,0 +1,13 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 03 Jun 2025 01:53:15 at https://www.felixcloutier.com/x86/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qir10%e1C2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.felixcloutier.com/x86/ -O1 "D:\websites\felixcloutier\felixcloutier" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+01:53:15	Warning: 	HTML file (755 bytes) retransferred due to lack of cache: https://www.felixcloutier.com/x86/
+01:57:42	Error: 	"Forbidden" (403) at link https://software.intel.com/en-us/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-1-2a-2b-2c-2d-3a-3b-3c-3d-and-4 (from https://www.felixcloutier.com/x86/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 44 seconds : 842 links scanned, 839 files written (8976027 bytes overall), 840 files updated [2894950 bytes received at 10193 bytes/sec], 8833349 bytes transferred using HTTP compression in 837 files, ratio 26%
+(1 errors, 1 warnings, 0 messages)

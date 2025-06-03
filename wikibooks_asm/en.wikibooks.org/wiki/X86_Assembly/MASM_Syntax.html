@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 vector-feature-night-mode-disabled skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available" lang="en" dir="ltr">
+
+<!-- Mirrored from en.wikibooks.org/wiki/X86_Assembly/MASM_Syntax by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 00:13:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>x86 Assembly/MASM Syntax - Wikibooks, open books for an open world</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 vector-feature-night-mode-disabled skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available";var cookie=document.cookie.match(/(?:^|; )enwikibooksmwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"cb0f1adf-c110-4183-8feb-a5c8d90c3c73","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"X86_Assembly/MASM_Syntax","wgTitle":"X86 Assembly/MASM Syntax","wgCurRevisionId":3675931,"wgRevisionId":3675931,"wgArticleId":51923,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Book:X86 Assembly"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"X86_Assembly/MASM_Syntax","wgRelevantArticleId":51923,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikibooks","wgCiteReferencePreviewsActive":true,"wgFlaggedRevsParams":{"tags":{"value":{"levels":3}}},"wgStableRevisionId":3675931,"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":2000,"wgMetricsPlatformUserExperiments":{"active_experiments":[],"overrides":[],"enrolled":[],"assigned":[],"subject_ids":[],"sampling_units":[]},"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgVector2022LanguageInHeader":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q1756018","wgCheckUserClientHintsHeadersJsApi":["brands","architecture","bitness","fullVersionList","mobile","model","platform","platformVersion"],"wgSiteNoticeId":"2.24"};
+RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","ext.flaggedRevs.basic":"ready","mediawiki.codex.messagebox.styles":"ready","ext.wikimediamessages.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.dismissableSiteNotice.styles":"ready"};RLPAGEMODULES=["ext.xLab","ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.vector.html","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.flaggedRevs.advanced","ext.gadget.wikidialog","ext.gadget.commons-file","ext.urlShortener.toolbar","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","wikibase.client.vector-2022","ext.checkUser.clientHints","ext.dismissableSiteNotice"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://en.wikibooks.org/w/load.php?lang=en&amp;modules=ext.dismissableSiteNotice.styles%7Cext.flaggedRevs.basic%7Cext.pygments%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediamessages.styles%7Cmediawiki.codex.messagebox.styles%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="https://en.wikibooks.org/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://en.wikibooks.org/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.45.0-wmf.3">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<meta property="og:title" content="x86 Assembly/MASM Syntax - Wikibooks, open books for an open world">
+<meta property="og:type" content="website">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="http://en.m.wikibooks.org/wiki/X86_Assembly/MASM_Syntax">
+<link rel="alternate" type="application/x-wiki" title="Edit" href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=edit">
+<link rel="icon" href="https://en.wikibooks.org/static/favicon/wikibooks.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://en.wikibooks.org/w/rest.php/v1/search" title="Wikibooks (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikibooks.org/w/api.php?action=rsd">
+<link rel="canonical" href="MASM_Syntax.html">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="https://en.wikibooks.org/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/" />
+<link rel="dns-prefetch" href="auth.wikimedia.html">
+</head>
+<body class="skin--responsive skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-X86_Assembly_MASM_Syntax rootpage-X86_Assembly skin-vector-2022 action-view"><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header no-font-mode-scale">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  title="Main menu" >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"  >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main Page</span></a></li><li id="n-help" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks"><span>Help</span></a></li><li id="n-Browse" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer"><span>Browse</span></a></li><li id="n-Cookbook" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world"><span>Cookbook</span></a></li><li id="n-Wikijunior" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Wikijunior" title="Books for children"><span>Wikijunior</span></a></li><li id="n-Featured-books" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Wikibooks:Featured_books" title="The best of Wikibooks"><span>Featured books</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randomrootpage" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Special:RandomInCategory/Book:Wikibooks_Stacks/Books"><span>Random book</span></a></li><li id="n-Using-Wikibooks" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Using_Wikibooks"><span>Using Wikibooks</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	
+<div id="p-community" class="vector-menu mw-portlet mw-portlet-community"  >
+	<div class="vector-menu-heading">
+		Community
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-Reading-room-forum" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Wikibooks:Reading_room"><span>Reading room forum</span></a></li><li id="n-portal" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community"><span>Community portal</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news"><span>Bulletin Board</span></a></li><li id="n-maintenance" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with"><span>Help out!</span></a></li><li id="n-Policies-and-guidelines" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures"><span>Policies and guidelines</span></a></li><li id="n-contact" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Wikibooks:Contact_us" title="Alternative methods of communication"><span>Contact us</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="https://en.wikibooks.org/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="https://en.wikibooks.org/static/images/icons/wikibooks.svg" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container skin-invert">
+		<img class="mw-logo-wordmark" alt="Wikibooks" src="https://en.wikibooks.org/static/images/mobile/copyright/wikibooks-wordmark-vi.svg" style="width: 7.5em; height: 0.9375em;">
+		<img class="mw-logo-tagline" alt="The Free Textbook Project" src="https://en.wikibooks.org/static/images/mobile/copyright/wikibooks-tagline-en.svg" width="120" height="10" style="width: 7.5em; height: 0.625em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="https://en.wikibooks.org/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Search Wikibooks [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="https://en.wikibooks.org/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input mw-searchInput"
+							 type="search" name="search" placeholder="Search Wikibooks" aria-label="Search Wikibooks" autocapitalize="sentences" spellcheck="false" title="Search Wikibooks [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Appearance">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Change the appearance of the page&#039;s font size, width, and color" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Appearance"  >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance"></span>
+
+<span class="vector-dropdown-label-text">Appearance</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikibooks.org&amp;uselang=en" class=""><span>Donations</span></a>
+</li>
+<li id="pt-createaccount-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="https://en.wikibooks.org/w/index.php?title=Special:CreateAccount&amp;returnto=X86+Assembly%2FMASM+Syntax" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="user-links-collapsible-item mw-list-item user-links-collapsible-item"><a data-mw="interface" href="https://en.wikibooks.org/w/index.php?title=Special:UserLogin&amp;returnto=X86+Assembly%2FMASM+Syntax" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out"  title="More options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"  >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-ellipsis mw-ui-icon-wikimedia-ellipsis"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal user-links-collapsible-item"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-sitesupport" class="user-links-collapsible-item mw-list-item"><a href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikibooks.org&amp;uselang=en"><span>Donations</span></a></li><li id="pt-createaccount" class="user-links-collapsible-item mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=Special:CreateAccount&amp;returnto=X86+Assembly%2FMASM+Syntax" title="You are encouraged to create an account and log in; however, it is not mandatory"><span class="vector-icon mw-ui-icon-userAdd mw-ui-icon-wikimedia-userAdd"></span> <span>Create account</span></a></li><li id="pt-login" class="user-links-collapsible-item mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=Special:UserLogin&amp;returnto=X86+Assembly%2FMASM+Syntax" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn"></span> <span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-user-menu-anon-editor" class="vector-menu mw-portlet mw-portlet-user-menu-anon-editor"  >
+	<div class="vector-menu-heading">
+		Pages for logged out editors <a href="https://en.wikibooks.org/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anoncontribs" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-anontalk" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Discussion for this IP address</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><div id="mw-dismissablenotice-anonplace"></div><script>(function(){var node=document.getElementById("mw-dismissablenotice-anonplace");if(node){node.outerHTML="\u003Cdiv class=\"mw-dismissable-notice\"\u003E\u003Cdiv class=\"mw-dismissable-notice-close\"\u003E[\u003Ca tabindex=\"0\" role=\"button\"\u003Edismiss\u003C/a\u003E]\u003C/div\u003E\u003Cdiv class=\"mw-dismissable-notice-body\"\u003E\u003C!-- CentralNotice --\u003E\u003Cdiv id=\"localNotice\" data-nosnippet=\"\"\u003E\u003Cdiv class=\"anonnotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cdiv style=\"width: fit-content; padding: 5px; border: 3px solid gray; background-color: rgba(127,127,127,0.04); text-align: center; margin: auto; color: inherit;\"\u003E\n\u003Cp\u003E\u003Cspan class=\"skin-invert\"\u003E\u003Cspan typeof=\"mw:File\"\u003E\u003Ca href=\"/wiki/File:OOjs_UI_icon_robot.svg\" class=\"mw-file-description\"\u003E\u003Cimg src=\"//upload.wikimedia.org/wikipedia/commons/thumb/7/71/OOjs_UI_icon_robot.svg/40px-OOjs_UI_icon_robot.svg.png\" decoding=\"async\" width=\"40\" height=\"40\" class=\"mw-file-element\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/7/71/OOjs_UI_icon_robot.svg/60px-OOjs_UI_icon_robot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/71/OOjs_UI_icon_robot.svg/80px-OOjs_UI_icon_robot.svg.png 2x\" data-file-width=\"20\" data-file-height=\"20\" /\u003E\u003C/a\u003E\u003C/span\u003E\u003C/span\u003E   The Wikibooks community is developing a policy on the use of generative AI. Please review the \u003Ca href=\"/wiki/Wikibooks:Artificial_Intelligence\" title=\"Wikibooks:Artificial Intelligence\"\u003Edraft policy\u003C/a\u003E and provide feedback on \u003Ca href=\"/wiki/Wikibooks_talk:Artificial_Intelligence\" title=\"Wikibooks talk:Artificial Intelligence\"\u003Eits talk page\u003C/a\u003E.\n\u003C/p\u003E\n\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E";}}());</script></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	
+	
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">Beginning</div>
+			</a>
+		</li>
+		<li id="toc-Instruction_Order"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Instruction_Order">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">1</span>
+				<span>Instruction Order</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Instruction_Order-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Instruction_Suffixes"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Instruction_Suffixes">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">2</span>
+				<span>Instruction Suffixes</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Instruction_Suffixes-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-Macros"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Macros">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">3</span>
+				<span>Macros</span>
+			</div>
+		</a>
+		
+		<ul id="toc-Macros-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-MASM_directives"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#MASM_directives">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">4</span>
+				<span>MASM directives</span>
+			</div>
+		</a>
+		
+		<ul id="toc-MASM_directives-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+	<li id="toc-A_Simple_Template_for_MASM510_programming"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#A_Simple_Template_for_MASM510_programming">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">5</span>
+				<span>A Simple Template for MASM510 programming</span>
+			</div>
+		</a>
+		
+		<ul id="toc-A_Simple_Template_for_MASM510_programming-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar no-font-mode-scale">
+					<nav aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  title="Table of Contents" >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading">x86 Assembly/MASM Syntax</h1>
+							
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector" aria-label="Go to an article in another language. Available in 1 language"   >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-1" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive"></span>
+
+<span class="vector-dropdown-label-text">1 language</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://ja.wikibooks.org/wiki/X86アセンブラ/MASMでの文法" title="X86アセンブラ/MASMでの文法 – Japanese" lang="ja" hreflang="ja" data-title="X86アセンブラ/MASMでの文法" data-language-autonym="日本語" data-language-local-name="Japanese" class="interlanguage-link-target"><span>日本語</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1756018#sitelinks-wikibooks" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar vector-feature-custom-font-size-clientpref--excluded">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected vector-tab-noicon mw-list-item"><a href="MASM_Syntax.html" title="View the content page [c]" accesskey="c"><span>Book</span></a></li><li id="ca-talk" class="new vector-tab-noicon mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=Talk:X86_Assembly/MASM_Syntax&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Change language variant"   >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+								
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="vector-tab-noicon mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;stable=1"><span>Read</span></a></li><li id="ca-current" class="collapsible selected vector-tab-noicon mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;stable=0&amp;redirect=no" title="View this page with the pending changes [v]" accesskey="v"><span>Latest draft</span></a></li><li id="ca-ve-edit" class="vector-tab-noicon mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;veaction=edit" title="Edit this page [v]" accesskey="v"><span>Edit</span></a></li><li id="ca-edit" class="collapsible vector-tab-noicon mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=edit" title="Edit the source code of this page [e]" accesskey="e"><span>Edit source</span></a></li><li id="ca-history" class="vector-tab-noicon mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+							</nav>
+				
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"  >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  title="More options" >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-more-view" class="vector-more-collapsible-item mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;stable=1"><span>Read</span></a></li><li id="ca-more-current" class="collapsible selected vector-more-collapsible-item mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;stable=0&amp;redirect=no"><span>Latest draft</span></a></li><li id="ca-more-ve-edit" class="vector-more-collapsible-item mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;veaction=edit" title="Edit this page [v]" accesskey="v"><span>Edit</span></a></li><li id="ca-more-edit" class="collapsible vector-more-collapsible-item mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=edit" title="Edit the source code of this page [e]" accesskey="e"><span>Edit source</span></a></li><li id="ca-more-history" class="vector-more-collapsible-item mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=history"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Special:WhatLinksHere/X86_Assembly/MASM_Syntax" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://en.wikibooks.org/wiki/Special:RecentChangesLinked/X86_Assembly/MASM_Syntax" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="http://commons.wikimedia.org/wiki/Special:UploadWizard?uselang=en" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;oldid=3675931" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=Special:CiteThisPage&amp;page=X86_Assembly%2FMASM_Syntax&amp;id=3675931&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikibooks.org%2Fwiki%2FX86_Assembly%2FMASM_Syntax"><span>Get shortened URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=Special:QrCode&amp;url=https%3A%2F%2Fen.wikibooks.org%2Fwiki%2FX86_Assembly%2FMASM_Syntax"><span>Download QR code</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-sister_projects" class="vector-menu mw-portlet mw-portlet-sister_projects"  >
+	<div class="vector-menu-heading">
+		Sister projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-Wikipedia" class="mw-list-item"><a href="https://en.wikipedia.org/wiki/Main_Page"><span>Wikipedia</span></a></li><li id="n-Wikiversity" class="mw-list-item"><a href="https://en.wikiversity.org/wiki/Wikiversity:Main_Page"><span>Wikiversity</span></a></li><li id="n-Wiktionary" class="mw-list-item"><a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page"><span>Wiktionary</span></a></li><li id="n-Wikiquote" class="mw-list-item"><a href="https://en.wikiquote.org/wiki/Main_Page"><span>Wikiquote</span></a></li><li id="n-Wikisource" class="mw-list-item"><a href="https://en.wikisource.org/wiki/Main_Page"><span>Wikisource</span></a></li><li id="n-Wikinews" class="mw-list-item"><a href="https://en.wikinews.org/wiki/Main_Page"><span>Wikinews</span></a></li><li id="n-Wikivoyage" class="mw-list-item"><a href="https://en.wikivoyage.org/wiki/Main_Page"><span>Wikivoyage</span></a></li><li id="n-Commons" class="mw-list-item"><a href="https://commons.wikimedia.org/wiki/Main_Page"><span>Commons</span></a></li><li id="n-Wikidata" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page"><span>Wikidata</span></a></li><li id="n-MediaWiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Main_Page"><span>MediaWiki</span></a></li><li id="n-Meta-Wiki" class="mw-list-item"><a href="https://meta.wikimedia.org/wiki/Main_Page"><span>Meta-Wiki</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-create_a_book" class="mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=X86+Assembly%2FMASM+Syntax"><span>Create a collection</span></a></li><li id="coll-download-as-rl" class="mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=Special:DownloadAsPdf&amp;page=X86_Assembly%2FMASM_Syntax&amp;action=show-download-screen"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li class="wb-otherproject-link wb-otherproject-wikipedia mw-list-item"><a href="https://en.wikipedia.org/wiki/Microsoft_Macro_Assembler" hreflang="en"><span>Wikipedia</span></a></li><li id="t-wikibase" class="wb-otherproject-link wb-otherproject-wikibase-dataitem mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1756018" title="Link to connected data repository item [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end no-font-mode-scale">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Appearance">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Appearance</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin">hide</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikibooks, open books for an open world</div>
+					</div>
+					<div id="contentSub"><div id="mw-content-subtitle"><div class="subpages">&lt; <bdi dir="ltr"><a href="https://en.wikibooks.org/wiki/X86_Assembly" title="X86 Assembly">X86 Assembly</a></bdi></div><div id="mw-fr-revision-messages"><div class="cdx-message mw-fr-message-box cdx-message--block cdx-message--notice mw-fr-basic mw-fr-draft-not-synced plainlinks noprint"><span class="cdx-message__icon"></span><div class="cdx-message__content">The <a class="external text" href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;stable=1">latest reviewed version</a> was <a class="external text" href="https://en.wikibooks.org/w/index.php?title=Special:Log&amp;type=review&amp;page=X86_Assembly/MASM_Syntax">checked</a> on <i>16 April 2020</i>. There are <a class="external text" href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;oldid=3675931&amp;diff=cur&amp;diffonly=0">template/file changes</a> awaiting review.</div></div></div></div></div>
+					
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p><span></span><style data-mw-deduplicate="TemplateStyles:r4486615">.mw-parser-output .fmbox{clear:both;margin:0.2em 0;width:100%;border:1px solid #a2a9b1;background-color:var(--background-color-interactive-subtle,#f8f9fa);box-sizing:border-box;color:var(--color-base,#202122)}.mw-parser-output .fmbox-warning{border:1px solid #bb7070;background-color:#ffdbdb}.mw-parser-output .fmbox-editnotice{background-color:transparent}.mw-parser-output .fmbox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .fmbox .mbox-image{border:none;padding:2px 0 2px 0.9em;text-align:center}.mw-parser-output .fmbox .mbox-imageright{border:none;padding:2px 0.9em 2px 0;text-align:center}.mw-parser-output .fmbox .mbox-invalid-type{text-align:center}@media screen{html.skin-theme-clientpref-night .mw-parser-output .fmbox-warning{background-color:#300}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os .mw-parser-output .fmbox-warning{background-color:#300}}</style></p><table class="plainlinks fmbox fmbox-system noprint" role="presentation"><tbody><tr><td class="mbox-text" style="text-align: center;"><b><span style="font-size: 125%;"><a href="https://en.wikibooks.org/wiki/X86_Assembly#Table_of_Contents" title="X86 Assembly">x86 Assembly</a></span></b><br />quick links: <a href="X86_Architecture.html" title="X86 Assembly/X86 Architecture">registers</a>&#160;•&#160;<a href="Data_Transfer.html" title="X86 Assembly/Data Transfer">move</a>&#160;• <a href="Control_Flow.html" title="X86 Assembly/Control Flow">jump</a>&#160;• <a href="Arithmetic.html" title="X86 Assembly/Arithmetic">calculate</a>&#160;• <a href="Logic.html" title="X86 Assembly/Logic">logic</a>&#160;• <a href="Shift_and_Rotate.html" title="X86 Assembly/Shift and Rotate">rearrange</a>&#160;• <a href="Other_Instructions.html" title="X86 Assembly/Other Instructions">misc.</a>&#160;• <a href="Floating_Point.html" title="X86 Assembly/Floating Point">FPU</a></td></tr></tbody></table> 
+<p>This page will explain x86 Programming using MASM syntax, and will also discuss how to use the macro capabilities of MASM. Other assemblers, such as <a href="NASM_Syntax.html" title="X86 Assembly/NASM Syntax">NASM</a> and <a href="FASM_Syntax.html" title="X86 Assembly/FASM Syntax">FASM</a>, use syntax different from MASM, similar only in that they all use Intel syntax.
+</p>
+<meta property="mw:PageProp/toc" />
+<div class="mw-heading mw-heading2"><h2 id="Instruction_Order">Instruction Order</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;veaction=edit&amp;section=1" title="Edit section: Instruction Order" class="mw-editsection-visualeditor"><span>edit</span></a><span class="mw-editsection-divider"> | </span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=edit&amp;section=1" title="Edit section&#039;s source code: Instruction Order"><span>edit source</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>MASM instructions typically have operands reversed from GAS instructions. for instance, instructions are typically written as <b>Instruction Destination, Source</b>. 
+</p><p>The <b>mov</b> instruction, written as follows:
+</p>
+<pre>mov al, 05h
+</pre>
+<p>will move the value 5 into the al register.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Instruction_Suffixes">Instruction Suffixes</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;veaction=edit&amp;section=2" title="Edit section: Instruction Suffixes" class="mw-editsection-visualeditor"><span>edit</span></a><span class="mw-editsection-divider"> | </span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=edit&amp;section=2" title="Edit section&#039;s source code: Instruction Suffixes"><span>edit source</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>MASM does not use instruction suffixes to differentiate between sizes (byte, word, dword, etc).
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Macros">Macros</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;veaction=edit&amp;section=3" title="Edit section: Macros" class="mw-editsection-visualeditor"><span>edit</span></a><span class="mw-editsection-divider"> | </span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=edit&amp;section=3" title="Edit section&#039;s source code: Macros"><span>edit source</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>MASM is known as either the "Macro Assembler", or the "Microsoft Assembler", depending on who you talk to. But no matter where your answers are coming from, the fact is that MASM has a powerful macro engine, and a number of built-in macros available immediately. 
+</p>
+<div class="mw-heading mw-heading2"><h2 id="MASM_directives">MASM directives</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;veaction=edit&amp;section=4" title="Edit section: MASM directives" class="mw-editsection-visualeditor"><span>edit</span></a><span class="mw-editsection-divider"> | </span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=edit&amp;section=4" title="Edit section&#039;s source code: MASM directives"><span>edit source</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p>MASM has a large number of directives that can control certain settings and behaviors. It has more of them compared to NASM or FASM, for example.
+</p>
+<div class="mw-highlight mw-highlight-lang-asm mw-content-ltr" dir="ltr"><pre><span></span><span class="na">.model</span><span class="w"> </span><span class="no">small</span>
+<span class="na">.stack</span><span class="w"> </span><span class="mi">100</span><span class="no">h</span>
+
+<span class="na">.data</span>
+<span class="nf">msg</span><span class="w">	</span><span class="no">db</span><span class="w">	</span><span class="err">&#39;</span><span class="no">Hello</span><span class="w"> </span><span class="no">world</span><span class="p">!</span><span class="no">$</span><span class="err">&#39;</span>
+
+<span class="na">.code</span>
+<span class="nl">start:</span>
+<span class="w">	</span><span class="nf">mov</span><span class="w">	</span><span class="no">ah</span><span class="p">,</span><span class="w"> </span><span class="mi">09</span><span class="no">h</span><span class="w">   </span><span class="c1">; Display the message</span>
+<span class="w">	</span><span class="nf">lea</span><span class="w">	</span><span class="no">dx</span><span class="p">,</span><span class="w"> </span><span class="no">msg</span>
+<span class="w">	</span><span class="nf">int</span><span class="w">	</span><span class="mi">21</span><span class="no">h</span>
+<span class="w">	</span><span class="nf">mov</span><span class="w">	</span><span class="no">ax</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="no">C00h</span><span class="w">  </span><span class="c1">; Terminate the executable</span>
+<span class="w">	</span><span class="nf">int</span><span class="w">	</span><span class="mi">21</span><span class="no">h</span>
+
+<span class="nf">end</span><span class="w"> </span><span class="no">start</span>
+</pre></div>
+<div class="mw-heading mw-heading2"><h2 id="A_Simple_Template_for_MASM510_programming">A Simple Template for MASM510 programming</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;veaction=edit&amp;section=5" title="Edit section: A Simple Template for MASM510 programming" class="mw-editsection-visualeditor"><span>edit</span></a><span class="mw-editsection-divider"> | </span><a href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;action=edit&amp;section=5" title="Edit section&#039;s source code: A Simple Template for MASM510 programming"><span>edit source</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<div class="mw-highlight mw-highlight-lang-asm mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">;template for masm510 programming using simplified segment definition</span>
+<span class="w"> </span><span class="nf">title</span><span class="w"> </span><span class="no">YOUR</span><span class="w"> </span><span class="no">TITLE</span><span class="w"> </span><span class="no">HERE</span>
+<span class="w"> </span><span class="nf">page</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="mi">132</span><span class="w"> </span>
+<span class="w"> </span><span class="c1">;tell the assembler to create a nice .lst file for the convenience of error pruning</span>
+<span class="w"> </span><span class="na">.model</span><span class="w"> </span><span class="no">small</span><span class="w"> </span>
+<span class="w"> </span><span class="c1">;maximum of 64KB for data and code respectively</span>
+<span class="w"> </span><span class="na">.stack</span><span class="w"> </span><span class="mi">64</span>
+<span class="w"> </span><span class="na">.data</span>
+<span class="w"> </span><span class="c1">;PUT YOUR DATA DEFINITION HERE</span>
+<span class="w"> </span><span class="na">.code</span>
+<span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="no">proc</span><span class="w"> </span><span class="no">far</span><span class="w"> </span>
+<span class="w"> </span><span class="c1">;This is the entry point,you can name your procedures by altering &quot;main&quot; according to some rules</span>
+<span class="w"> </span><span class="nf">mov</span><span class="w"> </span><span class="no">ax</span><span class="p">,</span><span class="err">@</span><span class="no">DATA</span><span class="w"> </span>
+<span class="w"> </span><span class="c1">;load the data segment address,&quot;@&quot; is the opcode for fetching the offset of &quot;DATA&quot;,&quot;DATA&quot; could be change according to your previous definition for data</span>
+<span class="w"> </span><span class="nf">mov</span><span class="w"> </span><span class="no">ds</span><span class="p">,</span><span class="no">ax</span><span class="w"> </span>
+<span class="w"> </span><span class="c1">;assign value to ds,&quot;mov&quot; cannot be used for copying data directly to segment registers(cs,ds,ss,es)</span>
+<span class="w"> </span><span class="c1">;PUT YOUR CODE HERE</span>
+<span class="w"> </span><span class="nf">mov</span><span class="w"> </span><span class="no">ah</span><span class="p">,</span><span class="mi">4</span><span class="no">ch</span>
+<span class="w"> </span><span class="nf">int</span><span class="w"> </span><span class="mi">21</span><span class="no">h</span><span class="w"> </span>
+<span class="w"> </span><span class="c1">;terminate program by a normal way</span>
+<span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="no">endp</span><span class="w"> </span>
+<span class="w"> </span><span class="c1">;end the &quot;main&quot; procedure</span>
+<span class="w"> </span><span class="nf">end</span><span class="w"> </span><span class="no">main</span><span class="w"> </span>
+<span class="w"> </span><span class="c1">;end the entire program centering around the &quot;main&quot; procedure</span>
+</pre></div>
+<!-- 
+NewPP limit report
+Parsed by mw‐web.eqiad.main‐6ff48c8d69‐wbt6r
+Cached time: 20250508202810
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.074 seconds
+Real time usage: 0.163 seconds
+Preprocessor visited node count: 231/1000000
+Post‐expand include size: 2614/2097152 bytes
+Template argument size: 446/2097152 bytes
+Highest expansion depth: 14/100
+Expensive parser function count: 2/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6146/5000000 bytes
+Lua time usage: 0.031/10.000 seconds
+Lua memory usage: 1026461/52428800 bytes
+Number of Wikibase entities loaded: 0/500
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   77.582      1 Template:X86_Assembly_Page
+100.00%   77.582      1 -total
+ 58.47%   45.366      1 Template:Fmbox
+ 31.65%   24.557      1 Template:BookCat
+ 12.25%    9.504      1 Template:Evalx
+  8.76%    6.795      1 Template:Resize
+  5.82%    4.513      2 Template:Yesno-no
+  4.67%    3.624      1 Template:BOOKCATEGORY
+  3.84%    2.979      1 Template:Lowercase_title
+  3.00%    2.331      2 Template:Yesno
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:51923:|#|:idhash:canonical and timestamp 20250508202810 and revision id 3675931. Rendering was triggered because: page-view
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1&amp;usesul3=1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;oldid=3675931">https://en.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;oldid=3675931</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://en.wikibooks.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://en.wikibooks.org/wiki/Category:Book:X86_Assembly" title="Category:Book:X86 Assembly">Book:X86 Assembly</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 16 April 2020, at 05:44.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="nofollow" class="external text" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike License</a>; additional terms may apply. By using this site, you agree to the <a class="external text" href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use">Terms of Use</a> and <a class="external text" href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy Policy.</a></li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="https://en.wikibooks.org/wiki/Wikibooks:Welcome">About Wikibooks</a></li>
+	<li id="footer-places-disclaimers"><a href="https://en.wikibooks.org/wiki/Wikibooks:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org/">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikibooks.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="http://en.m.wikibooks.org/w/index.php?title=X86_Assembly/MASM_Syntax&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://www.wikimedia.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/static/images/footer/wikimedia-button.svg" width="84" height="29"><img src="https://en.wikibooks.org/static/images/footer/wikimedia.svg" width="25" height="25" alt="Wikimedia Foundation" lang="en" loading="lazy"></picture></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/w/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="https://en.wikibooks.org/w/resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+		</div>
+	</div> 
+</div> 
+<div class="vector-header-container vector-sticky-header-container no-font-mode-scale">
+	<div id="vector-sticky-header" class="vector-sticky-header">
+		<div class="vector-sticky-header-start">
+			<div class="vector-sticky-header-icon-start vector-button-flush-left vector-button-flush-right" aria-hidden="true">
+				<button class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-sticky-header-search-toggle" tabindex="-1" data-event-name="ui.vector-sticky-search-form.icon"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<span>Search</span>
+			</button>
+		</div>
+			
+		<div role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box">
+			<div class="vector-typeahead-search-container">
+				<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail">
+					<form action="https://en.wikibooks.org/w/index.php" id="vector-sticky-search-form" class="cdx-search-input cdx-search-input--has-end-button">
+						<div  class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+							<div class="cdx-text-input cdx-text-input--has-start-icon">
+								<input
+									class="cdx-text-input__input mw-searchInput"
+									
+									type="search" name="search" placeholder="Search Wikibooks">
+								<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+							</div>
+							<input type="hidden" name="title" value="Special:Search">
+						</div>
+						<button class="cdx-button cdx-search-input__end-button">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-context-bar">
+				<nav aria-label="Contents" class="vector-toc-landmark">
+						
+					<div id="vector-sticky-header-toc" class="vector-dropdown mw-portlet mw-portlet-sticky-header-toc vector-sticky-header-toc vector-button-flush-left"  >
+						<input type="checkbox" id="vector-sticky-header-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-sticky-header-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"  >
+						<label id="vector-sticky-header-toc-label" for="vector-sticky-header-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+						</label>
+						<div class="vector-dropdown-content">
+					
+						<div id="vector-sticky-header-toc-unpinned-container" class="vector-unpinned-container">
+						</div>
+					
+						</div>
+					</div>
+			</nav>
+				<div class="vector-sticky-header-context-bar-primary" aria-hidden="true" >x86 Assembly/MASM Syntax</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-end" aria-hidden="true">
+			<div class="vector-sticky-header-icons">
+				<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-talk-sticky-header" tabindex="-1" data-event-name="talk-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbles mw-ui-icon-wikimedia-speechBubbles"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-subject-sticky-header" tabindex="-1" data-event-name="subject-sticky-header"><span class="vector-icon mw-ui-icon-article mw-ui-icon-wikimedia-article"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-history-sticky-header" tabindex="-1" data-event-name="history-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-history mw-ui-icon-wikimedia-wikimedia-history"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only mw-watchlink" id="ca-watchstar-sticky-header" tabindex="-1" data-event-name="watch-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-star mw-ui-icon-wikimedia-wikimedia-star"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-ve-edit-sticky-header" tabindex="-1" data-event-name="ve-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-edit mw-ui-icon-wikimedia-wikimedia-edit"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-edit-sticky-header" tabindex="-1" data-event-name="wikitext-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-wikiText mw-ui-icon-wikimedia-wikimedia-wikiText"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-viewsource-sticky-header" tabindex="-1" data-event-name="ve-edit-protected-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-editLock mw-ui-icon-wikimedia-wikimedia-editLock"></span>
+
+<span></span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-buttons">
+				<button class="cdx-button cdx-button--weight-quiet mw-interlanguage-selector" id="p-lang-btn-sticky-header" tabindex="-1" data-event-name="ui.dropdown-p-lang-btn-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-language mw-ui-icon-wikimedia-wikimedia-language"></span>
+
+<span>1 language</span>
+			</button>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive" id="ca-addsection-sticky-header" tabindex="-1" data-event-name="addsection-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbleAdd-progressive mw-ui-icon-wikimedia-speechBubbleAdd-progressive"></span>
+
+<span>Add topic</span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-icon-end">
+				<div class="vector-user-links">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.eqiad.main-6774879dc8-7vlw6","wgBackendResponseTime":141,"wgPageParseReport":{"limitreport":{"cputime":"0.074","walltime":"0.163","ppvisitednodes":{"value":231,"limit":1000000},"postexpandincludesize":{"value":2614,"limit":2097152},"templateargumentsize":{"value":446,"limit":2097152},"expansiondepth":{"value":14,"limit":100},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6146,"limit":5000000},"entityaccesscount":{"value":0,"limit":500},"timingprofile":["100.00%   77.582      1 Template:X86_Assembly_Page","100.00%   77.582      1 -total"," 58.47%   45.366      1 Template:Fmbox"," 31.65%   24.557      1 Template:BookCat"," 12.25%    9.504      1 Template:Evalx","  8.76%    6.795      1 Template:Resize","  5.82%    4.513      2 Template:Yesno-no","  4.67%    3.624      1 Template:BOOKCATEGORY","  3.84%    2.979      1 Template:Lowercase_title","  3.00%    2.331      2 Template:Yesno"]},"scribunto":{"limitreport-timeusage":{"value":"0.031","limit":"10.000"},"limitreport-memusage":{"value":1026461,"limit":52428800}},"cachereport":{"origin":"mw-web.eqiad.main-6ff48c8d69-wbt6r","timestamp":"20250508202810","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"X86 Assembly\/MASM Syntax","url":"https:\/\/en.wikibooks.org\/wiki\/X86_Assembly\/MASM_Syntax","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1756018","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1756018","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2005-12-08T17:54:24Z","dateModified":"2020-04-16T05:44:22Z","headline":"x86 assembler that uses the Intel syntax for MS-DOS and Microsoft Windows"}</script>
+</body>
+
+<!-- Mirrored from en.wikibooks.org/wiki/X86_Assembly/MASM_Syntax by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 00:13:21 GMT -->
+</html>
